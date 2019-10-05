@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+small {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #ff0057;
+  text-transform: uppercase;
+}
+
+.emoji {
+  margin-right: 8px;
+  font-size: 1.6rem;
+}
+
+.clock {
+  margin-bottom: 48px;
+  font-size: 92px;
+  font-weight: 700;
+}
+
+.clock.tabular {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}

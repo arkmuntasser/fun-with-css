@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Having Fun with CSS!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <small><span class="emoji">👎</span> Shifty McShifterson</small>
+      <div class="clock"></div>
+      <small><span class="emoji">👍</span> Balanced... Tabular...</small>
+      <div class="clock tabular"></div>
+    </main>
+
+    <script>
+      setInterval(() => {
+        const today = new Date();
+        const hours = today.getHours();
+        const minutes = today.getMinutes();
+        const seconds = today.getSeconds();
+
+        const clocks = document.querySelectorAll(".clock");
+        clocks.forEach(
+          clock =>
+            (clock.innerHTML = `${hours > 9 ? "" : "0"}${hours}:${
+              minutes > 9 ? "" : "0"
+            }${minutes}:${seconds > 9 ? "" : "0"}${seconds}`)
+        );
+      }, 1000);
+    </script>
+  </body>
+</html>
