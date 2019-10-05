@@ -1,0 +1,68 @@
+body {
+  padding: 40px 0;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 767px;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+ul[class],
+ol[class] {
+  margin: 0;
+  margin-bottom: 48px;
+  padding-left: 1.5em;
+  list-style: none;
+  counter-reset: li;
+}
+
+ol.moe {
+  padding-left: 2.5em;
+}
+
+ol.moe li {
+  display: flex;
+  align-items: baseline;
+}
+
+ul li::before,
+ol li::before {
+  display: inline-block;
+  width: 1em;
+  margin-bottom: 0.5em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  font-size: 1.2em;
+  text-align: right;
+}
+
+ul.emoji li::before {
+  content: "👉";
+}
+
+ol.moe li::before {
+  content: "." counters(li, ".");
+  counter-increment: li;
+  font-feature-settings: "ss01" 1;
+  direction: rtl;
+  float: left;
+
+  display: flex;
+  align-items: center;
+  min-width: 4em;
+  height: 2em;
+  margin-left: -2.5em;
+  background-image: url(moe.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center left;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9em;
+  font-weight: 900;
+}

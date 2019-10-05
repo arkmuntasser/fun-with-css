@@ -53,20 +53,21 @@
     </main>
 
     <script>
-      const imageboxCSSVariables = document.querySelector(
+      var imageboxCSSVariables = document.querySelector(
         ".imagebox.css-variables"
       );
-      const imageboxCurrentColor = document.querySelector(
+      var imageboxCurrentColor = document.querySelector(
         ".imagebox.current-color"
       );
-      const btns = document.querySelectorAll(".colorpicker");
-      btns.forEach(btn =>
-        btn.addEventListener("click", e => {
-          const color = e.target.dataset.color;
+      var btns = document.querySelectorAll(".colorpicker");
+
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(e) {
+          var color = e.target.dataset.color;
           imageboxCurrentColor.style.color = color;
           imageboxCSSVariables.style.setProperty("--color", color);
-        })
-      );
+        });
+      }
     </script>
   </body>
 </html>
