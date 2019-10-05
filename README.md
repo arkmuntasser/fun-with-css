@@ -13,11 +13,11 @@ A demonstration of the `attr()` function to create text that inverts color part 
 
 Not all patterns make sense to repeat and show only a fraction of the image. This forces the repeat to always show the entire image.
 
-### 3 .Tabular Numbers
+### 3. Tabular Numbers
 
 Don't you hate it when you make a counter and the numbers bounce horizontally? Me too! This prevents that.
 
-### 4 .The `currentColor` value vs CSS Custom Properties
+### 4. The `currentColor` value vs CSS Custom Properties
 
 It's like a CSS Custom Property, but just for color and supported damn near everywhere!
 
