@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Having Fun with CSS!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="btn-group">
+      <button class="colorpicker" data-color="tomato">tomato</button>
+      <button class="colorpicker" data-color="#ff0057">#ff0057</button>
+      <button class="colorpicker" data-color="rebeccapurple">
+        rebeccapurple
+      </button>
+      <button class="colorpicker" data-color="goldenrod">goldenrod</button>
+      <button class="colorpicker" data-color="forestgreen">forestgreen</button>
+    </div>
+    <main>
+      <section>
+        <figure class="imagebox css-variables">
+          <div class="banner"><span>Featured</span></div>
+          <img src="https://placehold.it/800x500" />
+          <figcaption>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              exercitationem placeat sint nesciunt repellat excepturi fuga
+              aperiam delectus! Laborum quos, omnis sint distinctio fuga
+              asperiores quae eaque aliquid dicta modi?
+            </p>
+            <a class="read-more">Read More</a>
+          </figcaption>
+        </figure>
+      </section>
+      <section>
+        <figure class="imagebox current-color">
+          <div class="banner"><span>Featured</span></div>
+          <img src="https://placehold.it/800x500" />
+          <figcaption>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              exercitationem placeat sint nesciunt repellat excepturi fuga
+              aperiam delectus! Laborum quos, omnis sint distinctio fuga
+              asperiores quae eaque aliquid dicta modi?
+            </p>
+            <a class="read-more">Read More</a>
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <script>
+      const imageboxCSSVariables = document.querySelector(
+        ".imagebox.css-variables"
+      );
+      const imageboxCurrentColor = document.querySelector(
+        ".imagebox.current-color"
+      );
+      const btns = document.querySelectorAll(".colorpicker");
+      btns.forEach(btn =>
+        btn.addEventListener("click", e => {
+          const color = e.target.dataset.color;
+          imageboxCurrentColor.style.color = color;
+          imageboxCSSVariables.style.setProperty("--color", color);
+        })
+      );
+    </script>
+  </body>
+</html>

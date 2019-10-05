@@ -1,0 +1,97 @@
+body {
+  padding: 40px 0;
+  color: blue;
+  --color: blue;
+}
+
+main {
+  display: flex;
+}
+
+section {
+  padding: 32px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+}
+
+.colorpicker {
+  text-indent: -9999px;
+  margin: 0 4px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.colorpicker[data-color="tomato"] {
+  background-color: tomato;
+}
+
+.colorpicker[data-color="forestgreen"] {
+  background-color: forestgreen;
+}
+
+.colorpicker[data-color="rebeccapurple"] {
+  background-color: rebeccapurple;
+}
+
+.colorpicker[data-color="goldenrod"] {
+  background-color: goldenrod;
+}
+
+.colorpicker[data-color="#ff0057"] {
+  background-color: #ff0057;
+}
+
+.imagebox {
+  position: relative;
+}
+
+.imagebox .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 12px;
+}
+
+.imagebox .banner span {
+  color: #fff;
+}
+
+.imagebox img {
+  display: block;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.imagebox p {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.imagebox a::after {
+  content: "➡️";
+  margin-left: 8px;
+}
+
+/* CSS Variables */
+.imagebox.css-variables .banner {
+  background-color: var(--color);
+}
+
+.imagebox.css-variables a {
+  color: var(--color);
+}
+
+/* currentColor */
+.imagebox.current-color .banner {
+  background-color: currentColor;
+}
+
+.imagebox.current-color a {
+  color: currentColor;
+}
