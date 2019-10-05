@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Having Fun with CSS!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="btn-group">
+      <button class="root">Update root font size</button>
+      <button class="wrapper">Update wrapper font size</button>
+      <button class="reset">reset</button>
+    </div>
+    <main>
+      <p class="px">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi possimus
+        expedita vero debitis nam? Ullam magni eius saepe, ad maiores ut
+        similique aut perferendis ducimus, odit vel ab, sint eaque.
+      </p>
+      <p class="rem">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim nesciunt
+        sed repellat dolore aut dolorem magni! Ducimus excepturi dignissimos
+        laudantium debitis aliquid repudiandae rerum harum numquam? Quia ratione
+        ut rerum!
+      </p>
+      <p class="em">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+        voluptatem laboriosam, eligendi nesciunt esse modi molestias iure
+        incidunt excepturi repellat provident officia, distinctio, reiciendis
+        quod sit id in tenetur ipsa.
+      </p>
+
+      <section>
+        <div class="btn-group">
+          <button class="size sm">0.6rem</button>
+          <button class="size md">1rem</button>
+          <button class="size lg">1.6rem</button>
+          <button class="size xl">2rem</button>
+          <button class="size xxl">2.4rem</button>
+        </div>
+        <h2 class="heading">
+          <span>My Cool Heading</span>
+        </h2>
+      </section>
+    </main>
+
+    <script>
+      const root = document.querySelector(".root");
+      const wrapper = document.querySelector(".wrapper");
+      const reset = document.querySelector(".reset");
+
+      const sizeBtns = document.querySelectorAll(".size");
+      const heading = document.querySelector(".heading");
+
+      root.addEventListener("click", () => {
+        document.querySelector("html").style.fontSize = "24px";
+      });
+
+      wrapper.addEventListener("click", () => {
+        document.querySelector("main").style.fontSize = "12px";
+      });
+
+      reset.addEventListener("click", () => {
+        document.querySelector("html").style.fontSize = "";
+        document.querySelector("main").style.fontSize = "";
+      });
+
+      sizeBtns.forEach(btn => {
+        btn.addEventListener("click", e => {
+          heading.style.fontSize = e.target.textContent;
+        });
+      });
+    </script>
+  </body>
+</html>

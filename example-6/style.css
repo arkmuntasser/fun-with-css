@@ -1,0 +1,63 @@
+body {
+  padding: 40px 0;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 767px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+button {
+  margin: 0 4px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.px {
+  font-size: 16px;
+}
+
+.rem {
+  font-size: 1rem;
+}
+
+.em {
+  font-size: 1em;
+}
+
+section {
+  margin-top: 48px;
+}
+
+.heading {
+  position: relative;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.heading::before {
+  content: "*";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5em;
+  line-height: 1;
+  transform: translate(-50%, -25%);
+  color: #ff0057;
+}
+
+.heading span {
+  position: relative;
+  z-index: 2;
+}
