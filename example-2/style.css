@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: azure;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  resize: vertical;
+  margin: 0 auto;
+  width: 512px;
+  min-height: calc(218px + 93px + 162px);
+  overflow: scroll;
+}
+
+.burger .bun {
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.burger .bun.top {
+  height: 218px;
+  background-image: url(hamburger-bun-top.png);
+}
+
+.burger .bun.bottom {
+  height: 93px;
+  background-image: url(hamburger-bun-bottom.png);
+}
+
+.burger .patty {
+  flex: 1;
+  margin: 0 auto;
+  width: 470px;
+  min-height: 162px;
+  background-repeat: round;
+  background-image: url(hamburger-patty.png);
+}
